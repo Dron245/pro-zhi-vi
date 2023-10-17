@@ -1,0 +1,153 @@
+//====================================================================================================
+.header {
+	padding: 16px 0px;
+	border-radius: 0px 0px 32px 32px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(2px);
+	&__container {
+		header & {
+			max-width: 1768px;
+		}
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 16, 10,1768,350,1);
+	}
+
+	&__menu {
+	}
+
+	&__button {
+		display: flex;
+		padding: 18px 48px;
+		justify-content: center;
+		align-items: center;
+		// gap: 8px;
+		border-radius: 64px;
+		background-color: $mainDark;
+		color: #fff;
+		font-size: rem(14);
+		font-weight: 600;
+		text-transform: uppercase;
+		transition: background-color 0.3s;
+		&:hover{
+			background-color: #174977;
+		}
+	}
+}
+.menu {
+
+	&__icon {
+	}
+
+	&__body {
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		@include adaptiveValue("column-gap", 36, 10,1768,768,1);
+		row-gap: 20px;
+		padding: 0px 10px;
+	}
+
+	&__item {
+
+		&_social {
+			@media (min-width:$mobile){
+				 display: none; 
+			}
+		}
+	}
+
+	&__link {
+		font-weight: 500;
+		text-transform: uppercase;
+		color: $mainDark;
+		@include adaptiveValue("font-size", 14, 12,1768,768,1);
+		transition: color 0.3s;
+		&:hover{
+			color: #156D9E;
+		}
+	}
+}
+.icon-menu {
+}
+.logo-header {
+
+	&__img {
+	}
+
+	&__text {
+		color: #1D334C;
+		font-weight: 600;
+		line-height: math.div(24 , 24);
+		@include adaptiveValue("font-size", 24, 14.7,1768,768,1);
+		text-transform: uppercase;
+	}
+}
+.menu-social {
+
+	&__link {
+	}
+}
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+
