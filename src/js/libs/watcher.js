@@ -118,11 +118,15 @@ class ScrollWatcher {
 			// Видим объект
 			// Добавляем класс
 			!targetElement.classList.contains('_watcher-view') ? targetElement.classList.add('_watcher-view') : null;
+			const mainBlock = document.querySelector('.main-block');
+			mainBlock.classList.add('scroll')
 			this.scrollWatcherLogging(`Я вижу ${targetElement.classList}, добавил класс _watcher-view`);
 		} else {
 			// Не видим объект
 			// Убираем класс
 			targetElement.classList.contains('_watcher-view') ? targetElement.classList.remove('_watcher-view') : null;
+			const mainBlock = document.querySelector('.main-block');
+			mainBlock.classList.remove('scroll')
 			this.scrollWatcherLogging(`Я не вижу ${targetElement.classList}, убрал класс _watcher-view`);
 		}
 	}

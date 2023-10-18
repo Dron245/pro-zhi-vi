@@ -44,7 +44,7 @@
 		align-items: center;
 		@include adaptiveValue("gap", 16, 10,1768,350,1);
 		@media (max-width:$pc){
-			 flex-wrap: wrap; 
+			//  flex-wrap: wrap; 
 		}
 		@media (max-width:$tablet){
 			flex: 1 0 auto;
@@ -57,21 +57,8 @@
 	}
 
 	&__button {
-		display: flex;
-		padding: 18px 48px;
-		justify-content: center;
-		align-items: center;
-		// gap: 8px;
-		border-radius: 64px;
-		background-color: $mainDark;
-		color: #fff;
-		@include adaptiveValue("font-size", 14, 10,1768,768,1);
-		font-weight: 600;
-		text-transform: uppercase;
-		transition: background-color 0.3s;
-		&:hover{
-			background-color: #174977;
-		}
+		
+		
 		&_text1 {
 			@media (max-width:$tablet){
 				 display: none; 
@@ -134,6 +121,9 @@
 		@include adaptiveValue("column-gap", 36, 10,1768,768,1);
 		row-gap: 20px;
 		padding: 0px 10px;
+		@media (max-width: em(1300)){
+			  justify-content: center;
+		}
 		@media (max-width:$tablet){
 			row-gap: 24px;
 			flex-direction: column;
@@ -147,7 +137,7 @@
 	&__item {
 
 		&_social {
-			@media (min-width:$mobile){
+			@media (min-width:$tablet){
 				 display: none; 
 			}
 		}
@@ -178,6 +168,7 @@
 		color: #1D334C;
 		font-weight: 600;
 		line-height: math.div(24 , 24);
+		white-space: nowrap;
 		@include adaptiveValue("font-size", 24, 14.7,1768,768,1);
 		text-transform: uppercase;
 		.menu-open & {

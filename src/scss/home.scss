@@ -1,3 +1,228 @@
 //====================================================================================================
+.page {
+
+	&__main-block {
+		position: relative;
+		// z-index: 2;
+		margin-top: 120px;
+		@media (max-width:$tablet){
+			margin-top: 60px;
+		}
+		@media (max-width:$mobile){
+			 margin-top: 30px; 
+		}
+		// @include adaptiveValue("margin-bottom", 360, 80,1758,768,1);
+	}
+}
+.main-block {
+		//  height: 1000px;
+	&__container {
+		position: relative;
+		@media (max-width:$tablet){
+			display: flex;
+			align-items: flex-start;
+		}
+		@media (max-width:$mobile){
+			 flex-direction: column;
+			 align-items: initial;
+		}
+		// display: flex;
+		// @include adaptiveValue("column-gap", 123, 40,1548,768,1);
+	}
+
+	&__doctor-data {
+		// position: sticky;
+		// flex: 0 0 27.648579%; /* 428/1548 */
+		position: fixed;
+		
+		// width: 426px;
+		@include adaptiveValue("width", 428, 223,1758,768,1);
+		border-radius: 32px;
+		border: 1px solid #FFF;
+		@media (max-width:$tablet){
+			position: relative;
+		}
+		@media (min-width:$tablet){
+			
+			.scroll & {
+				position: absolute;
+				bottom: 0%;
+				// position: relative;
+				// margin-top: auto;
+			} 
+		}
+
+		@media (max-width:$mobile){
+			position: relative;
+			margin: 0 auto;
+			// margin-top: 30px;
+			margin-bottom: 40px;
+		}
+		&::after{
+			content:'';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			
+			border-radius: 32px;
+			background: linear-gradient(0deg, rgba(255, 255, 255, 0.30) 34.7%, rgba(255, 255, 255, 0.00) 100%);
+			backdrop-filter: blur(12px);
+			z-index: -1;
+		}
+		
+	}
+
+	&__content {
+		position: relative;
+		z-index: 2;
+		width: 64%;
+		margin-left: auto;
+		@media (max-width:$tablet){
+			margin-left: 15px;
+		}
+		@media (max-width:$mobile){
+			 margin-left: 0;
+			 width: 100%;
+		}
+		// flex: 0 0 64.018088%; /* 991/1548 */
+	}
+
+	&__title {
+		font-weight: 500;
+		@include adaptiveValue("font-size", 154, 56,1548,768,1);
+		line-height: 1.5;
+		color: $mainDark;
+		@media (min-width:$tablet){
+			 &:not(:last-child) {margin-bottom: 50px;} 
+		}
+		@media (max-width:$mobile){
+			 text-align: center; 
+		}
+	}
+
+	&__subtitle {
+		display: block;
+		color: #364751;
+		font-weight: 300;
+		line-height: 1.5;
+		@media (max-width:$mobile){
+			// text-align: center;
+			 br {display: none;} 
+		}
+		@include adaptiveValue("font-size", 32, 16,1548,768,1);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 67, 17,1548,768,1);
+		}
+	}
+
+	&__button {
+		@media (max-width:$mobile){
+			 width: 100%; 
+		}
+		@include adaptiveValue("margin-bottom", 350, 50,1758,768,1);
+	}
+
+	&__aboutproject {
+	}
+
+	&__decor {
+		position: absolute;
+		z-index: -1;
+		top: 40px;
+		left: -58px;
+		img {
+			width: 100%;
+		}
+	}
+}
+.doctor-data {
+
+	&__content {
+		position: absolute;
+		bottom: 12px;
+		padding-left:22px;
+		padding-right: 22px;
+		// @include adaptiveValue("padding-bottom", 61, 26,1548,768,1);
+	}
+
+	&__img {
+		transform: translateY(-12px);
+		padding: 0px 27px;
+		padding-bottom: 70px;
+		img {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		display: inline-block;
+		color: $mainDark;
+		font-weight: 600;
+		@include adaptiveValue("font-size", 24, 12,1548,768,1);
+		text-transform: uppercase;
+		line-height: 1.66;
+		@include adaptiveValue("margin-bottom", 22, 8,1548,768,1);
+		@media (max-width:$mobile){
+			 line-height: 1.5; 
+		}
+	}
+
+	&__subtitle {
+		@include adaptiveValue("font-size", 20, 12,1548,768,1);
+		color: #54646D;
+	}
+}
+.button {
+}
+.aboutproject {
+
+	&__title {
+		font-weight: 500;
+		text-transform: uppercase;
+		line-height: math.div(48 , 16);
+		@include adaptiveValue("font-size", 16, 12,1758,768,1);
+		&:not(:last-child) {margin-bottom: 24px;}
+	}
+
+	&__text {
+		font-weight: 300;
+		color: #364751;
+		line-height: 1.5;
+		@include adaptiveValue("font-size", 32, 16,1758,768,1);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 35,1758,768,1);
+		}
+	}
+
+	&__advantages {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__advantage {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("row-gap", 38, 16,1758,768,1);
+	}
+
+	&__degrees {
+		font-weight: 500;
+		@include adaptiveValue("font-size", 96, 24,1758,768,1);
+		// line-height: 1.5;
+		text-transform: uppercase;
+	}
+
+	&__signature {
+		color: #364751;
+		@include adaptiveValue("font-size", 16, 11,1758,768,1);
+		@media (max-width:$mobile){
+			 font-weight: 300; 
+		}
+		text-transform: uppercase;
+	}
+}
 
 //====================================================================================================

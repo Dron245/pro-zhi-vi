@@ -1,10 +1,36 @@
-<div id="popup" aria-hidden="true" class="popup">
+<div id="popup01" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
-			</div>
+			<button data-close type="button" class="popup__close">
+				<img src="@img/popup/close.svg" alt="закрыть">
+			</button>
+			<span class="popup__title">Записаться <br> на приём</span>
+			<p class="popup__text">
+				Справляться с кризисом всегда трудно, но с поддержкой этот момент можно пережить с большим спокойствием и пониманием.
+			</p>
+			<form action="#" data-dev data-popup-message="#form-message" class="popup__form">
+				<input data-required autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Ваше имя" class="popup__input input">
+				<input data-required autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="Номер телефона" class="popup__input input " id="tel">
+				<p class="popup__text popup__text_politica">
+					Нажимая кнопку «Оставить заявку» вы соглашаетесь <a class="popop__politica-link" href="#">с Политикой конфиденциальности</a>
+				</p>
+				<button class="popup__button button" type="submit">Оставить заявку</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div id="form-message" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">
+				<img src="@img/popup/close.svg" alt="закрыть">
+			</button>
+			<span class="popup__title">Заявка принята!</span>
+			<p class="popup__text">
+				Пожалуйста, подождите, наш консультант скоро перезвонит вам.
+			</p>
+			<button data-close class="popup__button button" type="submit">Жду звонка</button>
 		</div>
 	</div>
 </div>

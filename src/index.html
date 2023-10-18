@@ -7,6 +7,46 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
+				<section data-watch="navigator" class="page__main-block main-block">
+					<div class="main-block__container">
+						<div class="main-block__doctor-data doctor-data">
+							<div class="doctor-data__img">
+								<img src="@img/main-block/docktor.png" alt="Алиса Анисимова">
+							</div>
+							<div class="doctor-data__content">
+								<span class="doctor-data__title">спецПроект <br> Алисы Анисимовой</span>
+								<span class="doctor-data__subtitle">эксперт с 12-летним стажем</span>
+							</div>
+						</div>
+						<div class="main-block__content">
+							<h1 data-da=".main-block__container, 767.99, 0" class="main-block__title">Pro-Жи-Ви</h1>
+							<span data-da=".main-block__container, 768, 0" class="main-block__subtitle">Проект для восстановления людей <br> помогающих профессий</span>
+							<button type="button" data-popup="#popup01" class="main-block__button button">Оставить заявку</button>
+							<div class="main-block__aboutproject aboutproject">
+								<span class="aboutproject__title">О проекте</span>
+								<p class="aboutproject__text">Команду специалистов из различных областей объединило желание создавать простые и эффективные алгоритмы проживания состояния эмоциональной подавленности и выхода из кризисов.</p>
+								<div class="aboutproject__advantages">
+									<div class="aboutproject__advantage">
+										<span class="aboutproject__degrees">20</span>
+										<span class="aboutproject__signature">специалистов</span>
+									</div>
+									<div class="aboutproject__advantage">
+										<span class="aboutproject__degrees">1580</span>
+										<span class="aboutproject__signature">часов практики</span>
+									</div>
+									<div class="aboutproject__advantage">
+										<span class="aboutproject__degrees">10</span>
+										<span class="aboutproject__signature">методик</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="main-block__decor">
+							<img src="@img/main-block/bg.svg" alt="">
+						</div>
+					</div>
+				</section>
+				<section class="page__reason reason" data-watch style="height: 1200px; background-color: red;"></section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

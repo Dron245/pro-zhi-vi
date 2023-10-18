@@ -9,11 +9,12 @@ textarea {
 	appearance: none;
 }
 .input {
-	border-radius: 0 !important;
+	// border-radius: 0 !important;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
+	padding: 17px 20px;
+	border: 1px solid #B6C4D2;
+	border-radius: 8px;
 	&._form-focus {
 	}
 	&._form-error {
@@ -23,3 +24,22 @@ textarea.input {
 	resize: none;
 	padding: 0px 0px;
 }
+
+::placeholder {
+	color: $mainDark;
+	font-weight: 600;
+	text-transform: uppercase;
+	opacity: 1; /* Firefox */
+ }
+ 
+ ::-ms-input-placeholder { /* Edge 12 -18 */
+	color: $mainDark;
+	font-weight: 600;
+	text-transform: uppercase;
+ }
+
+input._form-error {
+	border: 1px solid #E42D21;
+}
+
+.form__error {display: none;}
