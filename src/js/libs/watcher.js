@@ -9,7 +9,7 @@ import { flsModules } from "../files/modules.js";
 // data-watch-threshold - процент показа объекта для срабатывания
 // data-watch-once - наблюдать только один раз
 // _watcher-view - класс который добавляется при появлении объекта
-
+let mainBlock = document.querySelector('.main-block');
 class ScrollWatcher {
 	constructor(props) {
 		let defaultConfig = {
@@ -118,21 +118,28 @@ class ScrollWatcher {
 			// Видим объект
 			// Добавляем класс
 			!targetElement.classList.contains('_watcher-view') ? targetElement.classList.add('_watcher-view') : null;
-			const mainBlock = document.querySelector('.main-block');
-			mainBlock.classList.add('scroll')
+			// const mainBlock = document.querySelector('.main-block');
+			// mainBlock.classList.contains('scroll') ? mainBlock.classList.add('scroll') : null;
 			this.scrollWatcherLogging(`Я вижу ${targetElement.classList}, добавил класс _watcher-view`);
+			
 		} else {
 			// Не видим объект
 			// Убираем класс
 			targetElement.classList.contains('_watcher-view') ? targetElement.classList.remove('_watcher-view') : null;
-			const mainBlock = document.querySelector('.main-block');
-			mainBlock.classList.remove('scroll')
+			// const mainBlock = document.querySelector('.main-block');
+			console.log('123');
+			// mainBlock.classList.contains('scroll') ? mainBlock.classList.add('scroll') : null;
+			
 			this.scrollWatcherLogging(`Я не вижу ${targetElement.classList}, убрал класс _watcher-view`);
+			
 		}
 	}
 	// Функция отключения слежения за объектом
 	scrollWatcherOff(targetElement, observer) {
 		observer.unobserve(targetElement);
+		// const mainBlock = document.querySelector('.main-block');
+		console.log('456');
+		// mainBlock.classList.contains('scroll') ? mainBlock.classList.add('scroll') : null;
 		this.scrollWatcherLogging(`Я перестал следить за ${targetElement.classList}`);
 	}
 	// Функция вывода в консоль

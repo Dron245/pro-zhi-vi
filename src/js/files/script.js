@@ -18,17 +18,17 @@ const mask = IMask(element, maskOptions);
 	// mainBlock.classList.toggle('scroll')
 // 	console.log('123');
 // }
-document.addEventListener("DOMContentLoaded", ready);
+// document.addEventListener("DOMContentLoaded", ready);
 
-function ready() {
-	const doctorData = document.querySelector('.doctor-data');
-const doctorDataChord = doctorData.offsetTop + doctorData.clientHeight
-console.log(doctorDataChord);
-const reason = document.querySelector('.reason');
-const reasonChord = reason.offsetTop;
-console.log(reasonChord);
-if (doctorDataChord == reasonChord) {
-	console.log('123');
+// function ready() {
+// 	const doctorData = document.querySelector('.doctor-data');
+// const doctorDataChord = doctorData.offsetTop + doctorData.clientHeight
+// console.log(doctorDataChord);
+// const reason = document.querySelector('.reasons');
+// const reasonChord = reason.offsetTop;
+// console.log(reasonChord);
+// if (doctorDataChord == reasonChord) {
+// 	console.log('123');
 	
-}
-}
+// }
+// }

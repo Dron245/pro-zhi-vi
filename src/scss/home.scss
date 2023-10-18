@@ -11,7 +11,7 @@
 		@media (max-width:$mobile){
 			 margin-top: 30px; 
 		}
-		// @include adaptiveValue("margin-bottom", 360, 80,1758,768,1);
+		// @include adaptiveValue("margin-bottom", 360, 80,1548,768,1);
 	}
 }
 .main-block {
@@ -31,19 +31,24 @@
 	}
 
 	&__doctor-data {
+		
+		
 		// position: sticky;
 		// flex: 0 0 27.648579%; /* 428/1548 */
-		position: fixed;
 		
 		// width: 426px;
-		@include adaptiveValue("width", 428, 223,1758,768,1);
+		@include adaptiveValue("width", 428, 223,1548,768,1);
 		border-radius: 32px;
 		border: 1px solid #FFF;
 		@media (max-width:$tablet){
 			position: relative;
+			
 		}
 		@media (min-width:$tablet){
-			
+			display: inline-block;
+			margin-right: 120px;
+			position: sticky;
+		bottom: 320px;
 			.scroll & {
 				position: absolute;
 				bottom: 0%;
@@ -78,9 +83,15 @@
 		position: relative;
 		z-index: 2;
 		width: 64%;
-		margin-left: auto;
+		// outline: 1px solid red;
+		@include adaptiveValue("width", 991, 361,1920,991.98,1);
+		// margin-left: auto;
+		
 		@media (max-width:$tablet){
 			margin-left: 15px;
+		}
+		@media (min-width:$tablet){
+			  display: inline-block;
 		}
 		@media (max-width:$mobile){
 			 margin-left: 0;
@@ -91,7 +102,7 @@
 
 	&__title {
 		font-weight: 500;
-		@include adaptiveValue("font-size", 154, 56,1548,768,1);
+		@include adaptiveValue("font-size", 154, 56,1920,768,1);
 		line-height: 1.5;
 		color: $mainDark;
 		@media (min-width:$tablet){
@@ -121,7 +132,7 @@
 		@media (max-width:$mobile){
 			 width: 100%; 
 		}
-		@include adaptiveValue("margin-bottom", 350, 50,1758,768,1);
+		@include adaptiveValue("margin-bottom", 350, 50,1548,768,1);
 	}
 
 	&__aboutproject {
@@ -182,7 +193,7 @@
 		font-weight: 500;
 		text-transform: uppercase;
 		line-height: math.div(48 , 16);
-		@include adaptiveValue("font-size", 16, 12,1758,768,1);
+		@include adaptiveValue("font-size", 16, 12,1548,768,1);
 		&:not(:last-child) {margin-bottom: 24px;}
 	}
 
@@ -190,9 +201,9 @@
 		font-weight: 300;
 		color: #364751;
 		line-height: 1.5;
-		@include adaptiveValue("font-size", 32, 16,1758,768,1);
+		@include adaptiveValue("font-size", 32, 16,1548,768,1);
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 50, 35,1758,768,1);
+			@include adaptiveValue("margin-bottom", 50, 35,1548,768,1);
 		}
 	}
 
@@ -205,19 +216,19 @@
 	&__advantage {
 		display: flex;
 		flex-direction: column;
-		@include adaptiveValue("row-gap", 38, 16,1758,768,1);
+		@include adaptiveValue("row-gap", 38, 16,1548,768,1);
 	}
 
 	&__degrees {
 		font-weight: 500;
-		@include adaptiveValue("font-size", 96, 24,1758,768,1);
+		@include adaptiveValue("font-size", 96, 24,1548,768,1);
 		// line-height: 1.5;
 		text-transform: uppercase;
 	}
 
 	&__signature {
 		color: #364751;
-		@include adaptiveValue("font-size", 16, 11,1758,768,1);
+		@include adaptiveValue("font-size", 16, 11,1548,768,1);
 		@media (max-width:$mobile){
 			 font-weight: 300; 
 		}
@@ -225,4 +236,78 @@
 	}
 }
 
-//====================================================================================================
+//=========HOME===========================================================================================
+
+.page {
+
+	&__reasons {
+		background: url('@img/reason/bg1.png') bottom / cover no-repeat;
+		padding-top: 120px;
+		//  @include adaptiveValue("margin-top", 360, 80,1548,768,1);
+		position: relative;
+		z-index: 21;
+		@media (max-width:$tablet){
+			margin-top: 80px;
+			padding-top: 0;
+		}
+	}
+}
+.reasons {
+
+	&__title {
+		padding-right: 400px;
+		@media (max-width:$tablet){
+			padding-right: 36%;
+		}
+		@include adaptiveValue("margin-bottom", 186, 40,1548,768,1);
+	}
+
+	&__content {
+		display: flex;
+		align-items: stretch;
+		overflow-x: auto;
+		// justify-content: center;
+		// flex-wrap: wrap;
+		@include adaptiveValue("padding-bottom", 300, 60,1548,768,1);
+		gap: 20px;
+
+		@media (max-width:$tablet){
+			 gap: 11px;
+			
+		}
+	}
+
+	&__item {
+		flex: 0 0 18.93%;
+		// height: 100%;
+		padding: 44px 36px;
+		border-radius: 24px;
+		border: 1px solid #FFF;
+		background: rgba(255, 255, 255, 0.60);
+		backdrop-filter: blur(4px);
+		@media (max-width:$mobile){
+			 padding: 24px;
+			 flex: 0 0 50%;
+		}
+		@media (max-width:$mobileSmall){
+			 flex: 0 0 75%; 
+		}
+	}
+
+	&__text {
+		font-weight: 500;
+		color: #394E65;
+		line-height: 1.333;
+		@include adaptiveValue("font-size", 18, 14,1548,768,1);
+	}
+}
+.reason {
+
+	&__container {
+		@media (max-width:$pc){
+			padding-right: 0;
+		}
+	}
+}
+.title {
+}
