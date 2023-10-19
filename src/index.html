@@ -7,15 +7,15 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-				<section data-watch="navigator" class="page__main-block main-block">
+				<section class="page__main-block main-block" data-watch="navigator">
 					<div class="main-block__container">
 						<div class="main-block__doctor-data doctor-data">
-							<div class="doctor-data__img">
+							<div class="doctor-data__img doctor-img">
 								<img src="@img/main-block/docktor.png" alt="Алиса Анисимова">
 							</div>
-							<div class="doctor-data__content">
-								<span class="doctor-data__title">спецПроект <br> Алисы Анисимовой</span>
-								<span class="doctor-data__subtitle">эксперт с 12-летним стажем</span>
+							<div class="doctor-data__content doctor">
+								<span class="doctor-data__title doctor-title">спецПроект <br> Алисы Анисимовой</span>
+								<span class="doctor-data__subtitle doctor-subtitle">эксперт с 12-летним стажем</span>
 							</div>
 						</div>
 						<div class="main-block__content">
@@ -66,6 +66,150 @@
 								<p class="reasons__text">Вам хочется попробовать качественно новую жизнь, но вы не знаете, с чего начать</p>
 							</div>
 						</div>
+					</div>
+				</section>
+				<section class="page__programs programs">
+					<div class="programs__container">
+						<div class="programs__decor">
+							<img src="@img/programs/bg.png" alt="Будь собой">
+						</div>
+						<h2 class="programs__title title">Программы тренингов и консультаций</h2>
+						<div class="programs__content">
+							<div class="programs__item item-programs">
+								<div class="item-programs__img">
+									<img src="@img/programs/01.png" alt="Будь собой">
+								</div>
+								<div class="item-programs__content">
+									<span class="item-programs__text">Пульт управления эмоциями</span>
+								</div>
+							</div>
+							<div class="programs__item item-programs">
+								<div class="item-programs__img">
+									<img src="@img/programs/02.png" alt="Будь собой">
+								</div>
+								<div class="item-programs__content">
+									<span class="item-programs__text">Тренинг повышения самооценки</span>
+								</div>
+							</div>
+							<div class="programs__item item-programs">
+								<div class="item-programs__img">
+									<img src="@img/programs/03.png" alt="Будь собой">
+								</div>
+								<div class="item-programs__content">
+									<span class="item-programs__text">Как измениться, оставшись собой</span>
+								</div>
+							</div>
+							<div class="programs__item item-programs">
+								<div class="item-programs__img">
+									<img src="@img/programs/04.png" alt="">
+								</div>
+								<div class="item-programs__content">
+									<span class="item-programs__text">Пульт управления эмоциями</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__trenings trenings">
+					<div class="trenings__container">
+						<div class="trenings__how how">
+							<div class="how__decor">
+								<img src="@img/trenings/bg.png" alt="">
+							</div>
+							<div class="how__content">
+								<h2 class="how__title title">Как проходят тренинги</h2>
+								<p class="how__text">Клинический психолог, психотерапевт будут искать причину вашего поведения и решать задачу эмоционального состояния. А я настрою вам принципиально новую систему самоорганизации с пошаговой инструкцией к долгожданным результатам.</p>
+								<div class="how__doctor doctor">
+									<span class="how__title doctor-title">спецПроект <br> Алисы Анисимовой</span>
+									<span class="how__subtitle doctor-subtitle">эксперт с 12-летним стажем</span>
+								</div>
+							</div>
+							<div class="how__img">
+								<img src="@img/trenings/doctor.png" alt="Доктор">
+							</div>
+						</div>
+						<div class="trenings__quantity">
+							<div class="trenings__item item-trenings individual">
+								<div class="item-trenings__content">
+									<h3 class="item-trenings__title">индивидуальные сессии</h3>
+									<p class="item-trenings__text">Индивидуальный тренинг включает в себя основные тренинговые форматы: лекция, ролевые игры (тренер подыгрывает сотруднику), кейсы и тесты. В некоторых случаях он даже эффективнее классического группового тренинга, поскольку совмещает в себе еще и поддержку сотрудника в формате коучинга.</p>
+									<button data-popup="#popup01" class="item-trenings__button buton" type="button">Оставить заявку</button>
+								</div>
+								<div class="item-trenings__img">
+									<img src="@img/trenings/01.jpg" alt="Индивидуальные занятия">
+								</div>
+							</div>
+							<div class="trenings__item trenings__item_rewerse item-trenings group">
+								<div class="item-trenings__content">
+									<h3 class="item-trenings__title">групповые<br>для организаций</h3>
+									<p class="item-trenings__text">Групповой тренинг включает в себя основные тренинговые форматы: лекция, ролевые игры (тренер подыгрывает сотруднику), кейсы и тесты. В некоторых случаях он даже эффективнее классического группового тренинга, поскольку совмещает в себе еще и поддержку сотрудника в формате коучинга.</p>
+									<button data-popup="#popup01" class="item-trenings__button buton" type="button">Оставить заявку</button>
+								</div>
+								<div class="item-trenings__img">
+									<img src="@img/trenings/01.jpg" alt="Индивидуальные занятия">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__team team">
+					<div class="team__container">
+						<div class="team__decor"><img src="@img/team/bg.png" alt=""></div>
+						<h2 class="title">Наша команда</h2>
+						<div class="team__content">
+							<div class="team__item">
+								<div class="team__doctor-img doctor-img">
+									<img src="@img/team/01.png" alt="">
+								</div>
+								<div class="team__doctor doctor">
+									<span class="team__title doctor-title">Алиса<br> Анисимова</span>
+									<span class="team__subtitle doctor-subtitle">эксперт с 12-летним стажем</span>
+								</div>
+							</div>
+							<div class="team__item">
+								<div class="team__doctor-img doctor-img">
+									<img src="@img/team/02.png" alt="">
+								</div>
+								<div class="team__doctor doctor">
+									<span class="team__title doctor-title">Дарья<br> Смирнова</span>
+									<span class="team__subtitle doctor-subtitle">эксперт с 12-летним стажем</span>
+								</div>
+							</div>
+							<div class="team__item">
+								<div class="team__doctor-img doctor-img">
+									<img src="@img/team/03.png" alt="">
+								</div>
+								<div class="team__doctor doctor">
+									<span class="team__title doctor-title">Елизавета<br> Вышнинская</span>
+									<span class="team__subtitle doctor-subtitle">эксперт с 12-летним стажем</span>
+								</div>
+							</div>
+							<div class="team__item">
+								<div class="team__doctor-img doctor-img">
+									<img src="@img/team/04.png" alt="">
+								</div>
+								<div class="team__doctor doctor">
+									<span class="team__title doctor-title">Надежда<br> Терентьева</span>
+									<span class="team__subtitle doctor-subtitle">эксперт с 12-летним стажем</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__record record">
+					<div class="record__container">
+						<h2 class="record__title title">записаться на прием</h2>
+						<p class="record__text">Справляться с кризисом всегда трудно, но с поддержкой этот момент можно пережить с большим спокойствием и пониманием.</p>
+						<form action="#" data-dev data-popup-message="#form-message" class="record__form">
+							<input data-required autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Ваше имя" class="record__input input">
+							<input data-required autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="Номер телефона" class="record__input input " id="tel">
+							<div class="record__actions">
+								<button class="record__button button" type="submit">Оставить заявку</button>
+								<p class="record__text record__text_politica">
+									Нажимая кнопку «Оставить заявку» вы соглашаетесь <a class="record__politica-link" href="#">с Политикой конфиденциальности</a>
+								</p>
+							</div>
+						</form>
 					</div>
 				</section>
 			</main>

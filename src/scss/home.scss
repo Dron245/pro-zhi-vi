@@ -1,4 +1,3 @@
-//====================================================================================================
 .page {
 
 	&__main-block {
@@ -13,7 +12,34 @@
 		}
 		// @include adaptiveValue("margin-bottom", 360, 80,1548,768,1);
 	}
+
+	&__reasons {
+		background: url('@img/reason/bg1.png') bottom / cover no-repeat;
+		padding-top: 120px;
+		//  @include adaptiveValue("margin-top", 360, 80,1548,768,1);
+		position: relative;
+		z-index: 21;
+		@media (max-width:$tablet){
+			margin-top: 80px;
+			padding-top: 0;
+		}
+	}
+
+	&__programs {
+	}
+
+	&__trenings {
+	}
+
+	&__team {
+	}
+
+	&__record {
+	}
 }
+
+//=============main-block=======================================================================================
+
 .main-block {
 		//  height: 1000px;
 	&__container {
@@ -79,54 +105,54 @@
 		
 	}
 
-	&__content {
-		position: relative;
-		z-index: 2;
-		width: 64%;
-		// outline: 1px solid red;
-		@include adaptiveValue("width", 991, 361,1920,991.98,1);
-		// margin-left: auto;
+	// &__content {
+	// 	position: relative;
+	// 	z-index: 2;
+	// 	width: 64%;
+	// 	// outline: 1px solid red;
+	// 	@include adaptiveValue("width", 991, 361,1920,991.98,1);
+	// 	// margin-left: auto;
 		
-		@media (max-width:$tablet){
-			margin-left: 15px;
-		}
-		@media (min-width:$tablet){
-			  display: inline-block;
-		}
-		@media (max-width:$mobile){
-			 margin-left: 0;
-			 width: 100%;
-		}
-		// flex: 0 0 64.018088%; /* 991/1548 */
-	}
+	// 	@media (max-width:$tablet){
+	// 		margin-left: 15px;
+	// 	}
+	// 	@media (min-width:$tablet){
+	// 		  display: inline-block;
+	// 	}
+	// 	@media (max-width:$mobile){
+	// 		 margin-left: 0;
+	// 		 width: 100%;
+	// 	}
+	// 	// flex: 0 0 64.018088%; /* 991/1548 */
+	// }
 
-	&__title {
-		font-weight: 500;
-		@include adaptiveValue("font-size", 154, 56,1920,768,1);
-		line-height: 1.5;
-		color: $mainDark;
-		@media (min-width:$tablet){
-			 &:not(:last-child) {margin-bottom: 50px;} 
-		}
-		@media (max-width:$mobile){
-			 text-align: center; 
-		}
-	}
+	// &__title {
+	// 	font-weight: 500;
+	// 	@include adaptiveValue("font-size", 154, 56,1920,768,1);
+	// 	line-height: 1.5;
+	// 	color: $mainDark;
+	// 	@media (min-width:$tablet){
+	// 		 &:not(:last-child) {margin-bottom: 50px;} 
+	// 	}
+	// 	@media (max-width:$mobile){
+	// 		 text-align: center; 
+	// 	}
+	// }
 
-	&__subtitle {
-		display: block;
-		color: #364751;
-		font-weight: 300;
-		line-height: 1.5;
-		@media (max-width:$mobile){
-			// text-align: center;
-			 br {display: none;} 
-		}
-		@include adaptiveValue("font-size", 32, 16,1548,768,1);
-		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 67, 17,1548,768,1);
-		}
-	}
+	// &__subtitle {
+	// 	display: block;
+	// 	color: #364751;
+	// 	font-weight: 300;
+	// 	line-height: 1.5;
+	// 	@media (max-width:$mobile){
+	// 		// text-align: center;
+	// 		 br {display: none;} 
+	// 	}
+	// 	@include adaptiveValue("font-size", 32, 16,1548,768,1);
+	// 	&:not(:last-child) {
+	// 		@include adaptiveValue("margin-bottom", 67, 17,1548,768,1);
+	// 	}
+	// }
 
 	&__button {
 		@media (max-width:$mobile){
@@ -159,12 +185,12 @@
 	}
 
 	&__img {
-		transform: translateY(-12px);
-		padding: 0px 27px;
-		padding-bottom: 70px;
-		img {
-			width: 100%;
-		}
+		// transform: translateY(-12px);
+		// padding: 0px 27px;
+		// padding-bottom: 70px;
+		// img {
+		// 	width: 100%;
+		// }
 	}
 
 	&__title {
@@ -185,8 +211,7 @@
 		color: #54646D;
 	}
 }
-.button {
-}
+
 .aboutproject {
 
 	&__title {
@@ -236,22 +261,8 @@
 	}
 }
 
-//=========HOME===========================================================================================
+//=========REASONS===========================================================================================
 
-.page {
-
-	&__reasons {
-		background: url('@img/reason/bg1.png') bottom / cover no-repeat;
-		padding-top: 120px;
-		//  @include adaptiveValue("margin-top", 360, 80,1548,768,1);
-		position: relative;
-		z-index: 21;
-		@media (max-width:$tablet){
-			margin-top: 80px;
-			padding-top: 0;
-		}
-	}
-}
 .reasons {
 
 	&__title {
@@ -309,5 +320,171 @@
 		}
 	}
 }
+
+
+
+/*=======PROGRAMS===============*/
+
+.programs {
+
+	&__container {
+	}
+
+	&__decor {
+	}
+
+	&__title {
+	}
+
+	&__content {
+	}
+
+	&__item {
+	}
+}
 .title {
 }
+.item-programs {
+
+	&__img {
+	}
+
+	&__content {
+	}
+
+	&__text {
+	}
+}
+
+/*=======TRENINGS===============*/
+
+
+.trenings {
+
+	&__container {
+	}
+
+	&__how {
+	}
+
+	&__quantity {
+	}
+
+	&__item {
+
+		&_rewerse {
+		}
+	}
+}
+.how {
+
+	&__decor {
+	}
+
+	&__content {
+	}
+
+	&__title {
+	}
+
+	&__text {
+	}
+
+	&__doctor {
+	}
+
+	&__subtitle {
+	}
+
+	&__img {
+	}
+}
+.doctor {
+}
+
+.item-trenings {
+
+	&__content {
+	}
+
+	&__title {
+	}
+
+	&__text {
+	}
+
+	&__button {
+	}
+
+	&__img {
+	}
+}
+.individual {
+}
+
+
+/*=======TEAM===============*/
+
+
+.team {
+
+	&__container {
+	}
+
+	&__decor {
+	}
+
+	&__content {
+	}
+
+	&__item {
+	}
+
+	&__doctor-img {
+	}
+
+	&__doctor {
+	}
+
+	&__title {
+	}
+
+	&__subtitle {
+	}
+}
+.doctor-img {
+}
+
+/*=======RECORD===============*/
+
+
+.record {
+
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__text {
+
+		&_politica {
+		}
+	}
+
+	&__form {
+	}
+
+	&__input {
+	}
+
+	&__actions {
+	}
+
+	&__button {
+	}
+
+	&__politica-link {
+	}
+}
+
