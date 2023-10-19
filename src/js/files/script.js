@@ -32,3 +32,33 @@ const mask = IMask(element, maskOptions);
 	
 // }
 // }
+
+// var content = document.querySelector('.programs__content');
+// window.addEventListener('scroll', function() {
+//   var scrolledY = window.scrollY;
+//   var scrolledX = window.scrollX;
+// 	const programs = document.querySelector('.programs');
+//   if (
+// 	scrolledY > 625
+//   //programs.classList.contains('_watcher-view')
+//    && scrolledY < 3112
+//   ) {
+//     content.style.marginTop = 150 + 'px';
+//     content.style.position = "fixed";
+//     content.style.top = scrolledY * 0.001 + 'px';
+//     content.style.left = -(scrolledY - 625) * 0.55 + 'px';
+
+//   }
+//   if (scrolledY <= 625) {
+//     content.style.position = "initial";
+
+//   }
+//   if (scrolledY >= 3112) {
+
+//     content.style.position = "absolute";
+//     content.style.top = 3112 + 'px';
+
+//   }
+
+
+// });

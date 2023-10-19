@@ -8,7 +8,7 @@
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Mousewheel, FreeMode } from 'swiper/modules';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -45,19 +45,23 @@ function initSliders() {
 	bildSliders()
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.swiper')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.programs__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.swiper', { // Указываем скласс нужного слайдера
+		new Swiper('.programs__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation],
+			modules: [Mousewheel, FreeMode],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			autoHeight: true,
+			// slidesPerView: 3,
+			// spaceBetween: 25,
+			// autoHeight: true,
 			speed: 800,
-
+			freeMode:true,
+			direction: "horizontal",
+			mousewheel: {
+				releaseOnEdges: true,
+			 },
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
@@ -82,41 +86,124 @@ function initSliders() {
 			*/
 
 			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
+			
+			// scrollbar: {
+			// 	el: '.swiper-scrollbar',
+			// 	draggable: true,
+			// },
+			
 
 			// Кнопки "влево/вправо"
-			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
-			},
+			// navigation: {
+			// 	prevEl: '.swiper-button-prev',
+			// 	nextEl: '.swiper-button-next',
+			// },
 
 			// Брейкпоинты
-			/*
+			
 			breakpoints: {
 				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
+					slidesPerView: 1.37,
+					spaceBetween: 10,
 					autoHeight: true,
 				},
 				768: {
 					slidesPerView: 2,
-					spaceBetween: 20,
+					spaceBetween: 15,
 				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
+				// 992: {
+				// 	slidesPerView: 3,
+				// 	spaceBetween: 20,
+				// },
 				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+					slidesPerView: 3,
+					spaceBetween: 25,
 				},
 			},
+			
+			// События
+			on: {
+
+			}
+		});
+	}
+
+	if (document.querySelector('.team__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.team__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Mousewheel, FreeMode],
+			observer: true,
+			observeParents: true,
+			// slidesPerView: 3,
+			// spaceBetween: 25,
+			// autoHeight: true,
+			speed: 800,
+			freeMode:true,
+			direction: "horizontal",
+			mousewheel: {
+				releaseOnEdges: true,
+			 },
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
 			*/
+
+			// Пагинация
+			/*
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			*/
+
+			// Скроллбар
+			
+			// scrollbar: {
+			// 	el: '.swiper-scrollbar',
+			// 	draggable: true,
+			// },
+			
+
+			// Кнопки "влево/вправо"
+			// navigation: {
+			// 	prevEl: '.swiper-button-prev',
+			// 	nextEl: '.swiper-button-next',
+			// },
+
+			// Брейкпоинты
+			
+			breakpoints: {
+				320: {
+					slidesPerView: 1.37,
+					spaceBetween: 10,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 15,
+				},
+				// 992: {
+				// 	slidesPerView: 3,
+				// 	spaceBetween: 20,
+				// },
+				1268: {
+					slidesPerView: 3,
+					spaceBetween: 25,
+				},
+			},
+			
 			// События
 			on: {
 
@@ -134,8 +221,8 @@ function initSlidersScroll() {
 			const sliderScroll = new Swiper(sliderScrollItem, {
 				observer: true,
 				observeParents: true,
-				direction: 'vertical',
-				slidesPerView: 'auto',
+				direction: 'horisontal',
+				slidesPerView: '3.3',
 				freeMode: {
 					enabled: true,
 				},

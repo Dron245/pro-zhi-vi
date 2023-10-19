@@ -18,6 +18,7 @@
 }
 
 .title {
+	color: $mainDark;
 	font-weight: 500;
 	@include adaptiveValue("font-size", 96, 26,1548,768,1);
 	line-height: 1.3;
@@ -25,52 +26,28 @@
 }
 
 .doctor {
-	position: relative;
-	z-index: 2;
-	width: 64%;
-	// outline: 1px solid red;
-	@include adaptiveValue("width", 991, 361,1920,991.98,1);
-	// margin-left: auto;
-	
-	@media (max-width:$tablet){
-		margin-left: 15px;
-	}
-	@media (min-width:$tablet){
-		  display: inline-block;
-	}
-	@media (max-width:$mobile){
-		 margin-left: 0;
-		 width: 100%;
-	}
-	// flex: 0 0 64.018088%; /* 991/1548 */
+	position: absolute;
+	bottom: 53px;
+	padding-left:22px;
+	padding-right: 22px;
 }
 
 .doctor-title {
-	font-weight: 500;
-	@include adaptiveValue("font-size", 154, 56,1920,768,1);
-	line-height: 1.5;
-	color: $mainDark;
-	@media (min-width:$tablet){
-		 &:not(:last-child) {margin-bottom: 50px;} 
-	}
-	@media (max-width:$mobile){
-		 text-align: center; 
-	}
+	display: inline-block;
+		color: $mainDark;
+		font-weight: 600;
+		@include adaptiveValue("font-size", 24, 12,1548,768,1);
+		text-transform: uppercase;
+		line-height: 1.66;
+		@include adaptiveValue("margin-bottom", 22, 8,1548,768,1);
+		@media (max-width:$mobile){
+			 line-height: 1.5; 
+		}
 }
 
 .doctor-subtitle {
-	display: block;
-	color: #364751;
-	font-weight: 300;
-	line-height: 1.5;
-	@media (max-width:$mobile){
-		// text-align: center;
-		 br {display: none;} 
-	}
-	@include adaptiveValue("font-size", 32, 16,1548,768,1);
-	&:not(:last-child) {
-		@include adaptiveValue("margin-bottom", 67, 17,1548,768,1);
-	}
+	@include adaptiveValue("font-size", 20, 12,1548,768,1);
+	color: #54646D;
 }
 
 .doctor-img {
