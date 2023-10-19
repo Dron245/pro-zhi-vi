@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-				<section class="page__main-block main-block" data-watch="navigator">
+				<section class="page__main-block main-block" data-watch="navigator" data-watch-margin="0px">
 					<div class="main-block__container">
 						<div class="main-block__doctor-data doctor-data">
 							<div class="doctor-data__img doctor-img">
@@ -126,36 +126,6 @@
 										</div>
 									</div>
 								</div>
-								<div class="programs__slide">
-									<div class="programs__item item-programs">
-										<div class="item-programs__img">
-											<img src="@img/programs/02.png" alt="Будь собой">
-										</div>
-										<div class="item-programs__content">
-											<span class="item-programs__text">Тренинг повышения самооценки</span>
-										</div>
-									</div>
-								</div>
-								<div class="programs__slide">
-									<div class="programs__item item-programs">
-										<div class="item-programs__img">
-											<img src="@img/programs/03.png" alt="Будь собой">
-										</div>
-										<div class="item-programs__content">
-											<span class="item-programs__text">Как измениться, оставшись собой</span>
-										</div>
-									</div>
-								</div>
-								<div class="programs__slide">
-									<div class="programs__item item-programs">
-										<div class="item-programs__img">
-											<img src="@img/programs/04.png" alt="Будь собой">
-										</div>
-										<div class="item-programs__content">
-											<span class="item-programs__text">Пульт управления эмоциями</span>
-										</div>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -169,9 +139,9 @@
 							<div class="how__content">
 								<h2 class="how__title title">Как проходят тренинги</h2>
 								<p class="how__text">Клинический психолог, психотерапевт будут искать причину вашего поведения и решать задачу эмоционального состояния. А я настрою вам принципиально новую систему самоорганизации с пошаговой инструкцией к долгожданным результатам.</p>
-								<div class="how__doctor doctor">
-									<span class="how__title doctor-title">спецПроект <br> Алисы Анисимовой</span>
-									<span class="how__subtitle doctor-subtitle">эксперт с 12-летним стажем</span>
+								<div data-da=".how__img, 768"  class="how__doctor doctor">
+									<span class="how__name doctor-title">Екатерина Анисимова</span>
+									<span class="how__subtitle doctor-subtitle">Ведущий специалист в области психологии</span>
 								</div>
 							</div>
 							<div class="how__img">
@@ -183,7 +153,7 @@
 								<div class="item-trenings__content">
 									<h3 class="item-trenings__title">индивидуальные сессии</h3>
 									<p class="item-trenings__text">Индивидуальный тренинг включает в себя основные тренинговые форматы: лекция, ролевые игры (тренер подыгрывает сотруднику), кейсы и тесты. В некоторых случаях он даже эффективнее классического группового тренинга, поскольку совмещает в себе еще и поддержку сотрудника в формате коучинга.</p>
-									<button data-popup="#popup01" class="item-trenings__button buton" type="button">Оставить заявку</button>
+									<button data-popup="#popup01" class="item-trenings__button button" type="button">Оставить заявку</button>
 								</div>
 								<div class="item-trenings__img">
 									<img src="@img/trenings/01.jpg" alt="Индивидуальные занятия">
@@ -193,10 +163,10 @@
 								<div class="item-trenings__content">
 									<h3 class="item-trenings__title">групповые<br>для организаций</h3>
 									<p class="item-trenings__text">Групповой тренинг включает в себя основные тренинговые форматы: лекция, ролевые игры (тренер подыгрывает сотруднику), кейсы и тесты. В некоторых случаях он даже эффективнее классического группового тренинга, поскольку совмещает в себе еще и поддержку сотрудника в формате коучинга.</p>
-									<button data-popup="#popup01" class="item-trenings__button buton" type="button">Оставить заявку</button>
+									<button data-popup="#popup01" class="item-trenings__button button" type="button">Оставить заявку</button>
 								</div>
 								<div class="item-trenings__img">
-									<img src="@img/trenings/01.jpg" alt="Индивидуальные занятия">
+									<img src="@img/trenings/02.jpg" alt="Индивидуальные занятия">
 								</div>
 							</div>
 						</div>
