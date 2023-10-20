@@ -38,6 +38,23 @@ textarea.input {
 	text-transform: uppercase;
  }
 
+.record {
+	::placeholder {
+		color: rgba(255, 255, 255, 0.60);
+		font-size: rem(14);
+		font-weight: 600;
+		text-transform: uppercase;
+		opacity: 1; /* Firefox */
+	 }
+	 
+	 ::-ms-input-placeholder { /* Edge 12 -18 */
+		color: rgba(255, 255, 255, 0.60);
+		font-size: rem(14);
+		font-weight: 600;
+		text-transform: uppercase;
+	 }
+}
+
 input._form-error {
 	border: 1px solid #E42D21;
 }

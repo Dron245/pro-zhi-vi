@@ -38,7 +38,7 @@
 	}
 
 	&__record {
-		display: none;
+		@include adaptiveValue("margin-top", 328, 86,1548,768,1);
 	}
 }
 
@@ -376,6 +376,7 @@
 		display: flex;
 		flex-direction: column;
 		transition: background-color 0.3s;
+		cursor: pointer;
 		&:hover{
 			background-color: #174977;;
 		}
@@ -601,29 +602,73 @@
 		position: relative;
 	}
 
+	&__title {
+		@include adaptiveValue("margin-bottom", 80, 48,1548,768,1);
+	}
+
 	&__decor {
 		position: absolute;
 		right: 0;
 		top: -20%;
+		@media (max-width:$mobile){
+			 display: none; 
+		}
 	}
 
 	&__content {
 	}
 
-	&__title {
-		@include adaptiveValue("margin-bottom", 80, 48,1548,768,1);
-	}
-
 	&__item {
+		position: relative;
+		cursor: pointer;
 		border-radius: 32px;
 		border: 1px solid #FFF;
 	}
 
+	&__title-name {
+		display: block;
+		margin-bottom: 0;
+		transition: color 0.3s;
+		.team__item:hover & {
+			color: #156D9E;
+		}
+	}
+
 	&__doctor-img {
-		
+		padding-bottom: 0;
+		position: relative;
+		.team__item:hover &{
+			&::after{
+				content:'';
+				background: linear-gradient(0deg, rgba(255, 255, 255, 0.70) 34.7%, rgba(255, 255, 255, 0.00) 100%);
+			}
+		}
+		img {
+			object-fit: contain;
+		}
+		@media (min-width:em(1268)){
+			  
+		}
+		@media (min-width:$mobile){
+			  aspect-ratio: 428/648;
+		}
+		@media (max-width:$mobile){
+			aspect-ratio: 428/579;
+			width: initial;
+		}
+	}
+
+	&__swiper {
+		align-items: stretch;
+	}
+	&__slide {
+		// height: 100%;
 	}
 
 	&__doctor {
+		// position: relative;
+		width: 100%;
+		@include adaptiveValue("padding-left", 52, 20,1548,768,1);
 	}
 
 	&__title {
@@ -639,32 +684,118 @@
 
 
 .record {
+	border-radius: 64px 64px 0 0;
+	position: relative;
+	overflow: hidden;
+	@media (min-width:$mobile){
+			background: url('@img/record/bg.png') 0 0 / cover no-repeat;
+		}
+	@media (max-width:$mobile){
+		  background: #1D334C;
+	}
+	&__decor {
+		position: absolute;
+		left: -319px;
+		top: -77px;
+		transform: rotate(352deg);
+		@media (max-width:$tablet){
+			left: initial;
+			width: 300px;
+			right: -53px;
+			top: -53px;
+			transform: rotate(52deg);
+		}
 
+		
+		@media (max-width:$mobile){
+			
+			width: 220px;
+		}
+		@media (max-width:$mobileSmall){
+			right: -37px;
+			top: -37px;
+			width: 160px;
+			
+		}
+		// @include adaptiveValue("width", 637,160,1548,768,1 );
+		img {
+			width: 100%;
+			height: auto;
+		}
+		
+	}
+	@media (max-width:$mobile){
+		border-radius: 16px 16px 0 0;
+		overflow: hidden;
+	}
 	&__container {
+		@include adaptiveValue("padding-top", 160, 50,1548,768,1);
+		@include adaptiveValue("padding-bottom", 170, 40,1548,768,1);
 	}
 
 	&__title {
+		color: #FFF;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 48, 34,1548,768,1);
+		}
 	}
 
 	&__text {
-
+		color: #FFF;
+		line-height: 1.5;
+		@include adaptiveValue("font-size", 18, 14,1548,768,1);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 48, 34,1548,768,1);
+		}
 		&_politica {
+			color: rgba(255, 255, 255, 0.40);
+			@include adaptiveValue("font-size", 14, 12,1548,768,1);
 		}
 	}
 
 	&__form {
+		
 	}
 
 	&__input {
+		display: inline-block;
+		@include adaptiveValue("width", 428, 300,1548,768,1);
+		border: 1px solid #2C4867;
+		background: #0F2237;
+		color: rgba(255, 255, 255, 0.60);
+
+		@media (max-width:$mobile){
+			 width: 100%; 
+		}
+		@media (min-width:$mobile){
+			 &:not(:last-child) {margin-right: 10px;} 
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 48, 17,1548,768,1);
+		}
 	}
 
 	&__actions {
+		display: flex;
+		align-items: center;
+		gap: 36px;
+		@media (max-width:$mobile){
+			 flex-direction: column-reverse; 
+		}
 	}
 
 	&__button {
+		background-color: #fff;
+		color: $mainDark;
+		transition: color 0.3s, background-color 0.3s;
+		&:hover{
+			color: #FFF;
+			background-color:#0F2237;
+		}
 	}
 
 	&__politica-link {
+		color: #87BCE9;
 	}
 }
 

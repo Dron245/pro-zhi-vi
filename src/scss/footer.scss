@@ -1,16 +1,63 @@
 //====================================================================================================
 .footer {
-	height: 1000px;
-	background-color: aquamarine;
+	border-top: 1px solid #2C4867;
+	background: #1D334C;
 	&__container {
+		@include adaptiveValue("padding-top", 53, 40,1548,768,1);
+		@include adaptiveValue("padding-bottom", 55, 36,1548,768,1);
 	}
+	@media (max-width:$mobile){
+		background: #1D334C url('@img/footer/BG-footer 1.png') bottom / cover no-repeat;
+
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {margin-bottom: 50px;}
+		@media (max-width:$tablet){
+			flex-wrap: wrap;
+			&:not(:last-child) {margin-bottom: 20px;}
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width:$tablet){
+			 flex-direction: column;
+			 align-items: flex-start;
+			 row-gap: 8px; 
+		}
+	}
+
 }
+
+.footer {
+
+}
+
+
+
 .header {
 
 	&__logo {
+		.footer & {
+			all: inherit;
+			margin-bottom: 0;
+		}
 	}
 
 	&__menu {
+		.footer & {
+			@media (max-width:$tablet){
+				margin-top: 47px;
+				order: 1;
+				width: 100%;
+			}
+		}
 	}
 }
 .logo-header {
@@ -19,28 +66,99 @@
 	}
 
 	&__text {
+		footer & {
+			color: #fff;
+		}
 	}
 }
 .menu {
 
-	&__body {
+	&__body-footer {
+		
 	}
 
-	&__list {
+	&__list-footer {
+		display: flex;
+		justify-content: center;
+		row-gap: 24px;
+		@media (min-width:$tablet){
+			padding: 0px 10px;
+			 flex-wrap: wrap; 
+			 @include adaptiveValue("column-gap", 26, 10,1548,998,1);
+		}
+		@media (max-width:$tablet){
+			 flex-direction: column;
+			 justify-content: flex-start;
+			 flex-wrap: nowrap;
+		}
+		
 	}
 
 	&__item {
 
 		&_social {
+			.footer & {
+				display: flex;
+				align-items: center;
+				flex-wrap: nowrap;
+				@include adaptiveValue("gap", 24, 16,1548,768,1);
+			}
 		}
 	}
 
 	&__link {
+		.footer & {
+			
+			color: #fff;
+			transition: color 0.3s;
+			&:hover{
+				color: #87BCE9;
+			}
+		}
 	}
 }
 .menu-social {
 
 	&__link {
+		.footer & {
+			margin-right: 0;
+			@media (min-width:$mobile){
+				 display: inline-block;
+				 width: 50px;
+				 height: 50px;
+				 & svg {
+					width: 100%;
+					height: auto;
+				 } 
+			}
+			transition: fill 0.3s;
+		}
+		.footer &:hover {
+			& svg rect {
+				fill: #295985;
+			}
+		}
+		.footer & svg {
+			// transform: scale(1.4);
+			
+		}
+	}
+}
+
+.bottom-footer {
+	@include adaptiveValue("font-size", 14, 12,1548,768,1);
+	line-height: 1.5;
+
+	&__text {
+		color: rgba(255, 255, 255, 0.80);;
+	}
+
+	&__link {
+		color: #87BCE9;
+		transition: color 0.3s;
+		&:hover{
+			color: #fff;
+		}
 	}
 }
 
