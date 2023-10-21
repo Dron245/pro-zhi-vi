@@ -1,0 +1,248 @@
+.opportunities-section {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    padding: 144px 0;
+    background-color: var(--white)
+}
+
+@media(max-width: 1200px) {
+    .opportunities-section {
+        padding:80px 0 110px
+    }
+}
+
+@media(max-width: 900px) {
+    .opportunities-section {
+        width:auto;
+        min-height: 100%;
+        padding: 56px 0 68px;
+        overflow: hidden
+    }
+}
+
+.opportunities {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end
+}
+.qwe {
+	background-color: rebeccapurple;
+	height: 2000px;
+}
+.opportunities__wrap {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.opportunities__left {
+    width: 100%;
+    max-width: 1140px
+}
+
+.opportunities__title {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 60px;
+    color: var(--secondary-1);
+    margin-bottom: 36px
+}
+
+@media(max-width: 1200px) {
+    .opportunities__title {
+        font-size:32px;
+        line-height: 46px;
+        margin-bottom: 32px
+    }
+}
+
+@media(max-width: 900px) {
+    .opportunities__title {
+        font-size:24px;
+        line-height: 32px
+    }
+}
+
+@media(max-width: 768px) {
+    .opportunities__title {
+        font-size:20px;
+        line-height: 32px
+    }
+}
+
+.opportunities__title span {
+    color: var(--primary-default)
+}
+
+@media(max-width: 1200px) {
+    .opportunities__title {
+        margin-bottom:36px
+    }
+}
+
+@media(max-width: 900px) {
+    .opportunities__title {
+        margin-bottom:28px
+    }
+}
+
+@media(max-width: 768px) {
+    .opportunities__title {
+        margin-bottom:20px
+    }
+}
+
+.opportunities__right {
+    width: 100%;
+    padding-left: 40%
+}
+
+@media(max-width: 900px) {
+    .opportunities__right {
+        max-width:100%;
+        padding-left: 0
+    }
+}
+
+.opportunities__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+@media(max-width: 900px) {
+    .opportunities__cards {
+        -webkit-box-orient:vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+}
+
+.opportunities__card {
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+
+.opportunities__card:not(:last-child) {
+    margin-right: 136px
+}
+
+@media(max-width: 900px) {
+    .opportunities__card:not(:last-child) {
+        margin-right:0;
+        margin-bottom: 40px
+    }
+}
+
+.opportunities .card {
+    max-width: 328px
+}
+
+@media(max-width: 900px) {
+    .opportunities .card {
+        max-width:100%
+    }
+}
+
+.opportunities .card__title {
+    font-weight: 600;
+    font-size: 105px;
+    line-height: 121px;
+    color: var(--secondary-1);
+    margin-top: 0;
+    margin-bottom: 28px
+}
+
+@media(max-width: 1200px) {
+    .opportunities .card__title {
+        margin-bottom:20px;
+        font-size: 72px;
+        line-height: 86px
+    }
+}
+
+@media(max-width: 900px) {
+    .opportunities .card__title {
+        margin-bottom:12px;
+        font-size: 56px;
+        line-height: 68px
+    }
+}
+
+@media(max-width: 768px) {
+    .opportunities .card__title {
+        font-size:48px;
+        line-height: 56px
+    }
+}
+
+.opportunities .card__text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--secondary-1)
+}
+
+@media(max-width: 1200px) {
+    .opportunities .card__text {
+        font-size:14px;
+        line-height: 20px
+    }
+}
+
+@media(max-width: 900px) {
+    .opportunities .card__text {
+        font-size:13px;
+        line-height: 18px
+    }
+}
+
+.opportunities__space {
+    position: relative;
+    width: 100%
+}
+
+@media(max-width: 900px) {
+    .opportunities__space {
+        width:auto
+    }
+}
+
+.opportunities__sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 50vh;
+    overflow-x: hidden
+}
+
+@media(max-width: 900px) {
+    .opportunities__sticky {
+        position:static;
+        width: auto;
+        height: auto;
+        overflow-x: unset
+    }
+}
+
+.horizontal {
+    position: absolute;
+    height: 100%;
+    will-change: transform
+}
+
+@media(max-width: 900px) {
+    .horizontal {
+        position:static
+    }
+}

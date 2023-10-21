@@ -48,7 +48,7 @@
 		//  height: 1000px;
 	&__container {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		position: relative;
 		// outline: 1px solid greenyellow;
 		// position: relative;
@@ -57,7 +57,7 @@
 		}
 		@media (max-width:$tablet){
 			display: flex;
-			align-items: flex-start;
+			
 		}
 		@media (max-width:$mobile){
 			 flex-direction: column;
@@ -75,11 +75,11 @@
 		@media (min-width:$mobile){
 			// display: inline-block;
 			// margin-right: 120px;
-			position: absolute;
+			position: sticky;
 			top: 0;
 			.page__main-block._watcher-view & {
-				position: fixed;
-				top: 205px;
+				// position: fixed;
+				// top: 205px;
 				@media (max-width:$tablet){
 					top: 150px;
 				}
