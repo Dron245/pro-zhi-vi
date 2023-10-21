@@ -5,10 +5,15 @@ import { flsModules } from "./modules.js";
 
 const element = document.getElementById('tel');
 const maskOptions = {
-  mask: '+{7}(000)000-00-00'
+  mask: '+{7}(000)000 00 00'
 };
 const mask = IMask(element, maskOptions);
 
+const elementtwo = document.getElementById('teltwo');
+const maskOptionstwo = {
+  mask: '+{7}(000)000 00 00'
+};
+const masktwo = IMask(elementtwo, maskOptionstwo);
 // const mainBlock = document.querySelector('.main-block');
 // const reason = document.querySelector('.reason');
 // const qwe = reason.classList.contains('_watcher-view');

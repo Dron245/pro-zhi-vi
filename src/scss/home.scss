@@ -52,6 +52,9 @@
 		position: relative;
 		// outline: 1px solid greenyellow;
 		// position: relative;
+		@media (min-width:em(2100)){
+			  padding-bottom: 100px;
+		}
 		@media (max-width:$tablet){
 			display: flex;
 			align-items: flex-start;
@@ -66,10 +69,10 @@
 
 	&__doctor-data {
 		@include adaptiveValue("width", 428, 223,1548,768,1);
-		border-radius: 32px;
-		border: 1px solid #FFF;
+		// border-radius: 32px;
+		// border: 1px solid #FFF;
 		
-		@media (min-width:$tablet){
+		@media (min-width:$mobile){
 			// display: inline-block;
 			// margin-right: 120px;
 			position: absolute;
@@ -77,6 +80,9 @@
 			.page__main-block._watcher-view & {
 				position: fixed;
 				top: 205px;
+				@media (max-width:$tablet){
+					top: 150px;
+				}
 			}
 		}
 
@@ -101,7 +107,19 @@
 		// 	backdrop-filter: blur(12px);
 		// 	z-index: -1;
 		// }
-		
+		&::after{
+			content:'';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			border-radius: 32px;
+			border: 1px solid #FFF;
+			z-index: -1;
+			background: linear-gradient(0deg, rgba(255, 255, 255, 0.30) 34.7%, rgba(255, 255, 255, 0.00) 100%);
+			backdrop-filter: blur(12px);
+		}
 	}
 
 	&__content {
@@ -115,6 +133,9 @@
 		// margin-left: auto;
 		
 		@media (max-width:$tablet){
+			.menu-open & {
+				z-index: -1;
+			}
 			// margin-left: 15px;
 		}
 		@media (min-width:$tablet){
@@ -281,7 +302,7 @@
 	&__content {
 		display: flex;
 		align-items: stretch;
-		// overflow-x: auto;
+		
 		
 		@include adaptiveValue("padding-bottom", 300, 60,1548,768,1);
 		gap: 20px;
@@ -291,7 +312,9 @@
 		}
 		@media (max-width:$tablet){
 			 gap: 11px;
-			
+		}
+		@media (max-width:$mobile){
+			overflow-x: auto;
 		}
 	}
 
@@ -371,31 +394,51 @@
 		height: 100%;
 		// flex: 0 0 32.3%;
 		border-radius: 32px;
-		background: #1D334C;
+		
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;
-		transition: background-color 0.3s;
+		
 		cursor: pointer;
 		&:hover{
-			background-color: #174977;;
+			.item-programs__img::after{
+				background-color: #174977;
+			}
+			.item-programs__content {
+				background-color: #174977;
+			}
 		}
 		@media (max-width:$mobile){
 			//  flex: 0 0 72.222222%; /* 260/360 */
 		}
+		
 	}
 }
 
 .item-programs {
 
 	&__img {
+		position: relative;
 		img {
 			width: 100%;
 			height: auto;
 		}
+		&::after{
+			content:'';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 5.2%;
+			background-color: #1D334C;
+			transition: background-color 0.3s;
+			z-index: -1;
+		}
 	}
 
 	&__content {
+		background-color: #1D334C;
+		transition: background-color 0.3s;
 		padding:64px 56px;
 		@media (max-width:$tablet){
 			padding: 50px 46px;
@@ -430,6 +473,7 @@
 		position: relative;
 		display: flex;
 		align-items: flex-start;
+		// align-items: flex-end;
 		@media (max-width:$mobile){
 			 flex-direction: column; 
 		}
@@ -482,13 +526,13 @@
 	&__content {
 		flex: 0 0 52.002584%; /* 805/1548 */
 		@media (min-width:$mobile){
-			 margin-top: 130px; 
+			 margin-top: 120px; 
 		}
 	}
 
 	&__title {
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 92, 36,1548,768,1);
+			@include adaptiveValue("margin-bottom", 50, 36,1548,768,1);
 		}
 	}
 
@@ -509,6 +553,9 @@
 		padding-left: 0;
 		padding-right: 0px;
 		position: static;
+		@media (min-width:$mobile){
+			  padding-bottom: 20px;
+		}
 		@media (max-width:$mobile){
 			 position: absolute;
 			 right: 0;
@@ -530,6 +577,9 @@
 	}
 
 	&__img {
+		@media (min-width:$mobile){
+			 align-self: flex-end; 
+		}
 		@media (max-width:$mobile){
 			 position: relative;
 			 
@@ -546,6 +596,7 @@
 .item-trenings {
 
 	&__content {
+		flex: 0 0 46.632504%; /* 637/1366 */
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -619,10 +670,30 @@
 	}
 
 	&__item {
+		
 		position: relative;
 		cursor: pointer;
 		border-radius: 32px;
 		border: 1px solid #FFF;
+		&::after{
+			content:'';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.7;
+			border-radius: 32px;
+			background: linear-gradient(0deg, rgba(255, 255, 255, 0.30) 34.7%, rgba(255, 255, 255, 0.00) 100%);
+			backdrop-filter: blur(12px);
+			z-index: -1;
+		// transform: translateY(12px);
+		}
+		&:hover{
+			&::after {
+				background: linear-gradient(0deg, rgba(255, 255, 255, 0.70) 34.7%, rgba(255, 255, 255, 0.00) 100%);
+			}
+		}
 	}
 
 	&__title-name {
@@ -637,14 +708,13 @@
 	&__doctor-img {
 		padding-bottom: 0;
 		position: relative;
-		.team__item:hover &{
-			&::after{
-				content:'';
-				background: linear-gradient(0deg, rgba(255, 255, 255, 0.70) 34.7%, rgba(255, 255, 255, 0.00) 100%);
-			}
-		}
+		// .team__item:hover &{
+		// 	&::after{
+		// 		content:'';
+		// 	}
+		// }
 		img {
-			object-fit: contain;
+			// object-fit: contain;
 		}
 		@media (min-width:em(1268)){
 			  
@@ -653,7 +723,7 @@
 			  aspect-ratio: 428/648;
 		}
 		@media (max-width:$mobile){
-			aspect-ratio: 428/579;
+			aspect-ratio: 428/643;
 			width: initial;
 		}
 	}
@@ -754,7 +824,17 @@
 	}
 
 	&__form {
-		
+		position: relative;
+		.form__item {
+			display: inline-block;
+			@media (max-width:$mobile){
+				 display: block;
+				 &:not(:last-child) {margin-bottom: 14px;}
+			}
+			& .form__error {
+				right: 17px;
+			}
+		}
 	}
 
 	&__input {
@@ -765,17 +845,19 @@
 		color: rgba(255, 255, 255, 0.60);
 
 		@media (max-width:$mobile){
+			// display: block;
 			 width: 100%; 
 		}
 		@media (min-width:$mobile){
-			 &:not(:last-child) {margin-right: 10px;} 
+			 &:not(:last-child) {margin-right: 17px;} 
 		}
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 48, 17,1548,768,1);
+			// @include adaptiveValue("margin-bottom", 48, 17,1548,768,1);
 		}
 	}
 
 	&__actions {
+		 @include adaptiveValue("margin-top", 48, 17,1548,768,1);
 		display: flex;
 		align-items: center;
 		gap: 36px;
@@ -787,10 +869,9 @@
 	&__button {
 		background-color: #fff;
 		color: $mainDark;
-		transition: color 0.3s, background-color 0.3s;
+		transition:background-color 0.3s;
 		&:hover{
-			color: #FFF;
-			background-color:#0F2237;
+			background-color:#ADE6FF;
 		}
 	}
 

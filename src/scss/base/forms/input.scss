@@ -20,20 +20,41 @@ textarea {
 	&._form-error {
 	}
 }
+
+.popup .input {
+	background: #FAFAFB;
+	font-size: rem(13);
+}
+input {
+	outline: none;
+}
+.popup .input:focus-visible {
+	
+	border: 1px solid #3486D1 ;
+	// background: #FFF;
+}
+
 textarea.input {
 	resize: none;
 	padding: 0px 0px;
 }
+.popup input[type='text']::placeholder {
+		color: $mainDark;
+	}
+
+.record .input {
+	color: #fff;
+}
 
 ::placeholder {
-	color: $mainDark;
+	color: #dcdcdc;
 	font-weight: 600;
 	text-transform: uppercase;
 	opacity: 1; /* Firefox */
  }
  
  ::-ms-input-placeholder { /* Edge 12 -18 */
-	color: $mainDark;
+	color: #dcdcdc;
 	font-weight: 600;
 	text-transform: uppercase;
  }
@@ -57,6 +78,19 @@ textarea.input {
 
 input._form-error {
 	border: 1px solid #E42D21;
+	
+}
+.form__item {
+	position: relative;
 }
 
-.form__error {display: none;}
+.form__error {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	color: red;
+	font-size: rem(13);
+	line-height: 1.5;
+	padding-right: 16px;
+}

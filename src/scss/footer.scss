@@ -46,6 +46,7 @@
 	&__logo {
 		.footer & {
 			all: inherit;
+			cursor: pointer;
 			margin-bottom: 0;
 		}
 	}
@@ -150,14 +151,14 @@
 	line-height: 1.5;
 
 	&__text {
-		color: rgba(255, 255, 255, 0.80);;
+		color: rgba(255, 255, 255, 0.80);
 	}
 
 	&__link {
 		color: #87BCE9;
 		transition: color 0.3s;
 		&:hover{
-			color: #fff;
+			color: rgba(255, 255, 255, 0.80);
 		}
 	}
 }

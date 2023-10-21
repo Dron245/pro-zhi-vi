@@ -20,9 +20,10 @@
 .title {
 	color: $mainDark;
 	font-weight: 500;
-	@include adaptiveValue("font-size", 96, 26,1548,768,1);
+	@include adaptiveValue("font-size", 96, 26,1548,375,1);
 	line-height: 1.3;
 	text-transform: uppercase;
+	// word-break: break-all;
 }
 
 .doctor {
@@ -33,7 +34,7 @@
 }
 
 .doctor-title {
-	display: inline-block;
+	display: block;
 		color: $mainDark;
 		font-weight: 600;
 		@include adaptiveValue("font-size", 24, 12,1548,768,1);
@@ -53,26 +54,23 @@
 .doctor-img {
 	
 	transform: translateY(-12px);
-	padding: 0px 27px;
+	margin: 0 27px;
+	// padding: 0px 27px;
 	padding-bottom: 70px;
 	
 	img {
 		
 		width: 100%;
 	}
-	&::after{
-		content:'';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		opacity: 0.7;
-		border-radius: 32px;
-		background: linear-gradient(0deg, rgba(255, 255, 255, 0.30) 34.7%, rgba(255, 255, 255, 0.00) 100%);
-		backdrop-filter: blur(12px);
-		z-index: -1;
-		transform: translateY(12px);
-	}
+	// &::after{
+	// 	content:'';
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	top: 0;
+	// 	left: 0;
+	// 	border-radius: 32px;
+	// 	border: 1px solid #FFF;
+	// }
 	
 }

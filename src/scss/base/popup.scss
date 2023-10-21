@@ -22,7 +22,7 @@ body::after {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	padding: 30px 10px;
+	padding: 30px 15px;
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
@@ -37,6 +37,20 @@ body::after {
 	visibility: visible;
 	transform: scale(1);
 }
+
+.popup__decor {
+	position: absolute;
+	// opacity: 0.55;
+	top: -55px;
+	left: -55px;
+	&_bottom {
+		top: initial;
+		left: initial;
+		right: -55px;
+		bottom: -55px;
+		transform: rotate(180deg);
+	}
+}
 .popup__wrapper {
 	display: flex;
 	flex-direction: column;
@@ -49,6 +63,9 @@ body::after {
 	align-items: center;
 }
 .popup__content {
+	
+	position: relative;
+	overflow: hidden;
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
@@ -61,6 +78,7 @@ body::after {
 	max-width: 425px;
 	border-radius: 20px;
 	display: flex;
+	align-items: flex-start;
 	flex-direction: column;
 	.lock & {
 		visibility: visible;
@@ -80,7 +98,7 @@ body::after {
 		align-items: center;
 		justify-content: center;
 		background-color: #F2F4F5;
-		border-radius: 100px;
+		border-radius: 6px;
 	}
 
 	&__title {
