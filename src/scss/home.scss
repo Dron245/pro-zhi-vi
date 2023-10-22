@@ -107,6 +107,7 @@
 		// 	backdrop-filter: blur(12px);
 		// 	z-index: -1;
 		// }
+		
 		&::after{
 			content:'';
 			position: absolute;
@@ -115,7 +116,7 @@
 			top: 0;
 			left: 0;
 			border-radius: 32px;
-			border: 1px solid #FFF;
+			border: 1px solid rgba(255, 255, 255, 0.30);
 			z-index: -1;
 			background: linear-gradient(0deg, rgba(255, 255, 255, 0.30) 34.7%, rgba(255, 255, 255, 0.00) 100%);
 			backdrop-filter: blur(12px);
@@ -380,6 +381,41 @@
 		@include adaptiveValue("margin-bottom", 100, 40,1548,768,1);
 	}
 
+	&__slider {
+		width: 100%;
+		padding-left: 40%;
+		@media (max-width:$pc){
+			 padding-left: 30%; 
+		}
+		@media (max-width:$tablet){
+			padding-left: 20%;
+		}
+		@media (max-width:$mobile){
+			 padding-left: 10%; 
+		}
+	}
+
+	&__swiper {
+		display: flex;
+		gap: 24px;
+		@media (max-width:$tablet){
+			gap: 16px;
+		}
+		@media (max-width:$mobile){
+			 gap: 10px; 
+		}
+	}
+
+	&__slide {
+		flex: 0 0 500px;
+		@media (max-width:$tablet){
+			flex: 0 0 350px;
+		}
+		@media (max-width:$mobile){
+			 flex: 0 0 260px; 
+		}
+	}
+
 	&__content {
 		position: relative;
 		display: flex;
@@ -440,6 +476,7 @@
 		background-color: #1D334C;
 		transition: background-color 0.3s;
 		padding:64px 56px;
+		height: inherit;
 		@media (max-width:$tablet){
 			padding: 50px 46px;
 		}
@@ -459,7 +496,28 @@
 		}
 	}
 }
+.space {
+	position: relative;
+	width: 100%;
+}
 
+.sticky {
+	position: sticky;
+    top: 0;
+    width: 100%;
+    height: 75vh;
+   //  overflow-x: hidden;
+}
+
+.horizontal {
+	position: absolute;
+    height: 100%;
+    will-change: transform;
+	 display: flex;
+	 left: 0;
+	 right: 0;
+   //  align-items: flex-end;
+}
 /*=======TRENINGS===============*/
 
 
@@ -674,7 +732,7 @@
 		position: relative;
 		cursor: pointer;
 		border-radius: 32px;
-		border: 1px solid #FFF;
+		border: 1px solid rgba(255, 255, 255, 0.3);
 		&::after{
 			content:'';
 			position: absolute;
@@ -700,6 +758,7 @@
 		display: block;
 		margin-bottom: 0;
 		transition: color 0.3s;
+		@include adaptiveValue("margin-bottom", 22, 8,1548,768,1);
 		.team__item:hover & {
 			color: #156D9E;
 		}
@@ -728,11 +787,41 @@
 		}
 	}
 
-	&__swiper {
-		align-items: stretch;
+	&__slider {
+		width: 100%;
+		padding-left: 40%;
+		@media (max-width:$pc){
+			 padding-left: 30%; 
+		}
+		@media (max-width:$tablet){
+			padding-left: 20%;
+		}
+		@media (max-width:$mobile){
+			 padding-left: 10%; 
+		}
 	}
+
+	&__swiper {
+		// align-items: stretch;
+		display: flex;
+				gap: 48px;
+				@media (max-width:$tablet){
+					gap: 26px;
+				}
+				@media (max-width:$mobile){
+					gap: 10px; 
+				}
+	}
+
 	&__slide {
 		// height: 100%;
+		flex: 0 0 428px;
+		@media (max-width:$tablet){
+			flex: 0 0 310px;
+		}
+		@media (max-width:$mobile){
+			 flex: 0 0 260px; 
+		}
 	}
 
 	&__doctor {
@@ -811,7 +900,7 @@
 	}
 
 	&__text {
-		color: #FFF;
+		color: rgba(255, 255, 255, 0.70);
 		line-height: 1.5;
 		@include adaptiveValue("font-size", 18, 14,1548,768,1);
 		&:not(:last-child) {

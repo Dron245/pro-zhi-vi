@@ -11,7 +11,7 @@ import { flsModules } from "../files/modules.js";
 class Popup {
 	constructor(options) {
 		let config = {
-			logging: true,
+			logging: false,
 			init: true,
 			// Для кнопок 
 			attributeOpenButton: 'data-popup', // Атрибут для кнопки, которая вызывает попап
