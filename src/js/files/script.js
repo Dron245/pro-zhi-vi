@@ -3,17 +3,17 @@ import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
-const element = document.getElementById('tel');
-const maskOptions = {
-  mask: '+{7}(000)000 00 00'
-};
-const mask = IMask(element, maskOptions);
+// const element = document.getElementById('tel');
+// const maskOptions = {
+//   mask: '+{7}(000)000 00 00'
+// };
+// const mask = IMask(element, maskOptions);
 
-const elementtwo = document.getElementById('teltwo');
-const maskOptionstwo = {
-  mask: '+{7}(000)000 00 00'
-};
-const masktwo = IMask(elementtwo, maskOptionstwo);
+// const elementtwo = document.getElementById('teltwo');
+// const maskOptionstwo = {
+//   mask: '+{7}(000)000 00 00'
+// };
+// const masktwo = IMask(elementtwo, maskOptionstwo);
 // const mainBlock = document.querySelector('.main-block');
 // const reason = document.querySelector('.reason');
 // const qwe = reason.classList.contains('_watcher-view');
@@ -111,7 +111,7 @@ const masktwo = IMask(elementtwo, maskOptionstwo);
  }*/
 
 
- if (document.body.clientWidth > 900) {
+ if (document.body.clientWidth > 991) {
 	const spaceHolder = document.querySelectorAll('.space');
 	// const horizontal = document.querySelector('.horizontal');
  
@@ -142,11 +142,11 @@ const masktwo = IMask(elementtwo, maskOptionstwo);
 		 const objectWidth = ref.scrollWidth;
 		 console.log(objectWidth);
 		 if (document.body.clientWidth > 1920) {
-			return objectWidth - vw + vh + vw / 2;
+			return objectWidth - vw + vh + vw / 3;
 		 }
  
 		 if (document.body.clientWidth > 1366) {
-			return objectWidth - vw + vh + vw / 1.5;
+			return objectWidth - vw + vh + vw / 3;
 		 }
  
 		 if (document.body.clientWidth <= 1366) {
