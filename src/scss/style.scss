@@ -62,6 +62,7 @@ body {
 	// height: 11435px;
 	// word-break: break-all;
 	// Скролл заблокирован
+	overflow: visible;
 	.lock & {
 		overflow: hidden;
 		touch-action: none;
