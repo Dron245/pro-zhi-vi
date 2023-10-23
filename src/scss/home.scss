@@ -45,6 +45,12 @@
 //=============main-block=======================================================================================
 
 .main-block {
+	@media (max-width:$tablet){
+		.menu-open & {
+			position: relative;
+			z-index: -1;
+		}
+	}
 		//  height: 1000px;
 	&__container {
 		display: flex;
@@ -76,7 +82,7 @@
 			// display: inline-block;
 			// margin-right: 120px;
 			position: sticky;
-			top: 0;
+			top: 25px;
 			.page__main-block._watcher-view & {
 				// position: fixed;
 				// top: 205px;

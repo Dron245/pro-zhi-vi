@@ -110,6 +110,14 @@ import { flsModules } from "./modules.js";
 	}
  }*/
 
+ window.addEventListener('click', e => { 
+	const target = e.target 
+	// const menu = document.querySelector('.menu__body');
+	if (!target.closest('.menu__icon') && !target.closest('.menu__body')) { 
+	document.documentElement.classList.remove("menu-open");
+	}
+ })
+
 
  if (document.body.clientWidth > 991) {
 	const spaceHolder = document.querySelectorAll('.space');
@@ -140,7 +148,7 @@ import { flsModules } from "./modules.js";
 		 const vw = window.innerWidth;
 		 const vh = window.innerHeight;
 		 const objectWidth = ref.scrollWidth;
-		 console.log(objectWidth);
+		//  console.log(objectWidth);
 		 if (document.body.clientWidth > 1920) {
 			return objectWidth - vw + vh + vw / 3;
 		 }
