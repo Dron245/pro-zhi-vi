@@ -9,11 +9,11 @@ window.addEventListener("load", function () {
 	};
 	const mask = IMask(element, maskOptions);
 
-	// const elementtwo = document.getElementById('teltwo');
-	// const maskOptionstwo = {
-	//   mask: '+{7}(000)000 00 00'
-	// };
-	// const masktwo = IMask(elementtwo, maskOptionstwo);
+	const elementtwo = document.getElementById('teltwo');
+	const maskOptionstwo = {
+	  mask: '+{7}(000)000 00 00'
+	};
+	const masktwo = IMask(elementtwo, maskOptionstwo);
 	// const mainBlock = document.querySelector('.main-block');
 	// const reason = document.querySelector('.reason');
 	// const qwe = reason.classList.contains('_watcher-view');
