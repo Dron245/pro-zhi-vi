@@ -132,11 +132,11 @@ window.addEventListener("load", function () {
 				window.addEventListener('scroll', () => {
 				// const sticky = document.querySelector('.sticky');
 				horizontal.style.transform = `translateX(-${sticky.offsetTop}px)`;
-				element.style.height = `${calcDynamicHeight(horizontal)}px`;
+				// element.style.height = `${calcDynamicHeight(horizontal)}px`;
 					
-				if (window.activeScroll) {
-				window.activeScroll();
-				}
+				// if (window.activeScroll) {
+				// window.activeScroll();
+				// }
 			});
 	
 			window.addEventListener('resize', () => {
@@ -149,7 +149,8 @@ window.addEventListener("load", function () {
 			const vw = window.innerWidth;
 			const vh = window.innerHeight;
 			const objectWidth = ref.scrollWidth;
-			//  console.log(objectWidth);
+			  console.log(objectWidth);
+			  console.log(ref);
 			if (document.body.clientWidth > 1920) {
 				return objectWidth - vw + vh + vw / 3;
 			}
